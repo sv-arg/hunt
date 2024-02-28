@@ -7,3 +7,11 @@ number {
   width: 300px;
   padding: 10px;
 }
+unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+centered {
+  text-align: center;
+}
