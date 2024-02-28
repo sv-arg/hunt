@@ -12,6 +12,14 @@
         width: 300px;
         padding: 10px;
       }
+      unselectable {
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+      centered {
+        text-align: center;
+      }
     </style>
   </head>
     <script>
@@ -19,9 +27,9 @@
         let code = window.prompt('Enter a code:')
       }
     </script>
-    <h1 style="color:white; font-family:verdana;" class="title">untitled arg game - v0.0.2.3</h1>
+    <h1 style="color:white; font-family:verdana;" class="title">untitled arg game - v0.0.2.4</h1>
     <button onclick="code()">Enter a code...</button>
   <hr>
     <h1 style="color:white;" class="number">1</h1>
-    <p style="color:#252525; font-size:100px;">DARKNESS</p>
+    <p style="color:#111111; font-size:100px; class="unselectable centered";">DARKNESS</p>
 </html>
