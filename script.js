@@ -1,5 +1,7 @@
-function form() {
-  let code == window.prompt("Enter a code:")
-  return code
+let stage = 1
+function code() {
+ let code = window.prompt('Enter a code:')
+ if (code == DARKNESS) {
+   window.prompt('test')
+ }
 }
-
