@@ -26,12 +26,13 @@
   let stage = 1
   function code() {
    let code = window.prompt('Enter a code:')
-   if (code == "DARKNESS") {
-     window.prompt('test')
+   if (code == "DARKNESS" and stage == 1) {
+     stage = 2
+     document.getElementById("number").innerHTML = "2"
    }
   }
   </script>
-    <h1 style="color:white; font-family:verdana;" class="title">untitled arg game v0.0.2.12</h1>
+    <h1 style="color:white; font-family:verdana;" class="title">untitled arg game v0.0.2.13</h1>
     <button onclick="code()">Enter a code...</button>
   <hr>
     <h1 style="color:white;" class="number">1</h1>
