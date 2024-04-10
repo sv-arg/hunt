@@ -12,20 +12,20 @@
      stage = 2
      document.getElementById("number").innerHTML = "2"
    }
-  function funky() {
-     if ${e.code} = 'ArrowLeft' {
+  function stage() {
+     if event.code = 'ArrowLeft' {
       if stage != 1 {
        stage = stage - 1
       } 
      }
-      if ${e.code} = 'ArrowRight' {
+      if event.code = 'ArrowRight' {
         if stage != 999 {
          stage = stage + 1
         } 
        }
     }
   </script>
-    <p style="color:white">v0.0.3.5 - make images NOW</p> <input type="text" onkeydown="funky()" placeholder="Press left or right to change stages></input>
+    <p style="color:white">v0.0.3.6 - make images NOW</p> <input type="text" onkeydown="stage()" size="40" placeholder="Press left or right to change stages></input>
     <!-- <button onclick="code()">Enter a code...</button> legacy unused for now -->
     <p style="color:#111111; font-size:100px; class="unselectable;" class="centered"">DARKNESS</p>
 </html>
