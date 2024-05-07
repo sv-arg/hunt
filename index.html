@@ -10,13 +10,6 @@
   <img src="placeholder.png" id="codeimage">
   <script>
   let stage = 1
-  function code() {
-   let code = window.prompt('Enter a code:')
-   if (code == "DARKNESS" && stage == 1) {
-     stage = 2
-     document.getElementById("number").innerHTML = "2"
-   }
-    
   function leftButton(event) {
     let key = event.code
       if (stage != 1) {
