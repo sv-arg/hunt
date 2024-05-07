@@ -4,20 +4,25 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">Code Huntin' - v0.2</p> 
+  <p style="color:white">Code Huntin' - v0.3</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
   <img src="stage1.png" id="codeimage">
   <p id="checkpointP1"></p>
   <form id="form">
-    <input type="text" id="stagecode1" size="0"></input>
-    <input type="text" id="stagecode2" size="0"></input>
-    <input type="text" id="stagecode3" size="0"></input>
-    <input type="text" id="stagecode4" size="0"></input>
-    <input type="text" id="stagecode5" size="0"></input>
-    <input type="submit" value="" id="submit"></input>
+    <input type="text" id="stagecode1" size="20"></input><br>
+    <input type="text" id="stagecode2" size="20"></input><br>
+    <input type="text" id="stagecode3" size="20"></input><br>
+    <input type="text" id="stagecode4" size="20"></input><br>
+    <input type="text" id="stagecode5" size="20"></input><br>
+    <input type="submit" value="Submit" id="submit"></input>
   </form>
+  <style>
+    #form {
+      display; none;
+    }
+  </style>
   <!-- use id not class lmao -->
   <script>
   let stage = 1
@@ -36,20 +41,12 @@
        if (stage == 4) {
             document.getElementById("codeimage").src="stage4.png";
             document.getElementById("checkpointP1").innerHTML="";
-            document.getElementById("stagecode1").size="0";
-            document.getElementById("stagecode2").size="0";
-            document.getElementById("stagecode3").size="0";
-            document.getElementById("stagecode4").size="0";
-            document.getElementById("stagecode5").size="0";
+            document.getElementById("form").style.display = "none";
        }
       if (stage == 5) {
             document.getElementById("codeimage").src="blank.png";
             document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages. They must be in order unless 2 codes were found on the same stage.";
-            document.getElementById("stagecode1").size="20";
-            document.getElementById("stagecode2").size="20";
-            document.getElementById("stagecode3").size="20";
-            document.getElementById("stagecode4").size="20";
-            document.getElementById("stagecode5").size="20";
+            document.getElementById("form").style.display = "block";
        }
       } 
   }
@@ -65,20 +62,11 @@
          if (stage == 4) {
             document.getElementById("codeimage").src="stage4.png";
             document.getElementById("checkpointP1").innerHTML="";
-            document.getElementById("stagecode1").size="0";
-            document.getElementById("stagecode2").size="0";
-            document.getElementById("stagecode3").size="0";
-            document.getElementById("stagecode4").size="0";
-            document.getElementById("stagecode5").size="0";
          }
         if (stage == 5) {
             document.getElementById("codeimage").src="blank.png";
             document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages. They must be in order unless 2 codes were found on the same stage.";
-            document.getElementById("stagecode1").size="20";
-            document.getElementById("stagecode2").size="20";
-            document.getElementById("stagecode3").size="20";
-            document.getElementById("stagecode4").size="20";
-            document.getElementById("stagecode5").size="20";
+            document.getElementById("form").style.display = "block";
         }
         } 
        }
@@ -113,6 +101,7 @@
       {
         stage = stage + 1
         document.getElementById("codeimage").src="stage6.png";
+        document.getElementById("form").style.display = "block";
       }
     }
     
