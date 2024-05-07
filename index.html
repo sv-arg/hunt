@@ -11,13 +11,27 @@
   <!-- use id not class lmao -->
   <script>
   let stage = 1
-  function leftButton(event) {
-    let key = event.code
+  function leftButton() {
       if (stage != 1) {
        stage = stage - 1
+       if (stage == 1) {
+            document.getElementById("codeimage").src="stage1.png";
+       }
+       if (stage == 2) {
+            document.getElementById("codeimage").src="stage2.png";
+       }
+       if (stage == 3) {
+            document.getElementById("codeimage").src="stage3.png";
+       }
+       if (stage == 4) {
+            document.getElementById("codeimage").src="stage4.png";
+       }
+      if (stage == 5) {
+            document.getElementById("codeimage").src="stage5.png";
+       }
       } 
   }
-    function rightButton(event) {
+    function rightButton() {
         if (stage != 999) {
          stage = stage + 1
           if (stage == 2) {
