@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <p style="color:white">v0.0.3.27 - make images NOW jesus christ you have 1 day until showcase you are so unbelivably behind</p> 
-  <button class="lbutton">Previous Stage</button>
-  <button class="rbutton">Next Stage</button>
+  <button id="lbutton">Previous Stage</button>
+  <button id="rbutton">Next Stage</button>
   <img src="placeholder.png" id="codeimage">
   <!-- use id not class lmao -->
   <script>
@@ -34,8 +34,8 @@
           }
         } 
        }
-    document.querySelector('lbutton').addEventListener('click', leftButton)
-    document.querySelector('rbutton').addEventListener('click', rightButton)
+    document.getElementById('lbutton').addEventListener('click', leftButton)
+    document.getElementById('rbutton').addEventListener('click', rightButton)
   </script>
 </html>
 
