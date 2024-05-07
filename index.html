@@ -4,11 +4,12 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">v0.0.3.29 - make images NOW jesus christ you have 1 day until showcase you are so unbelivably behind</p> 
+  <p style="color:white">v0.1 - make images NOW jesus christ you have 1 day until showcase you are so unbelivably behind</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
-  <p> </p>
+  <p></p>
   <img src="stage1.png" id="codeimage">
+  <p id="checkpointP1"></p>
   <!-- use id not class lmao -->
   <script>
   let stage = 1
@@ -25,15 +26,17 @@
             document.getElementById("codeimage").src="stage3.png";
        }
        if (stage == 4) {
-            document.getElementById("codeimage").src="stage4.png";
+            document.getElementById("codeimage").src="stage4.png";\
+            document.getElementById("checkpointP1").innerHTML="";
        }
       if (stage == 5) {
-            document.getElementById("codeimage").src="stage5.png";
+            document.getElementById("codeimage").src="blank.png";
+            document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages.";
        }
       } 
   }
     function rightButton() {
-        if (stage != 999) {
+        if (stage != 5) {
          stage = stage + 1
           if (stage == 2) {
             document.getElementById("codeimage").src="stage2.png";
@@ -41,12 +44,14 @@
           if (stage == 3) {
             document.getElementById("codeimage").src="stage3.png";
           }
-          if (stage == 4) {
+         if (stage == 4) {
             document.getElementById("codeimage").src="stage4.png";
-          }
-          if (stage == 5) {
-            document.getElementById("codeimage").src="stage5.png";
-          }
+            document.getElementById("checkpointP1").innerHTML="";
+         }
+        if (stage == 5) {
+            document.getElementById("codeimage").src="blank.png";
+            document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages.";
+        }
         } 
        }
     document.getElementById('lbutton').addEventListener('click', leftButton)
