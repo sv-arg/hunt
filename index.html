@@ -4,12 +4,20 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">v0.1.1.1 - make images NOW jesus christ you have 1 day until showcase you are so unbelivably behind</p> 
+  <p style="color:white">Code Huntin' - v0.1.1.1</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
   <img src="stage1.png" id="codeimage">
   <p id="checkpointP1"></p>
+  <form id="form">
+    <input type="text" id="stagecode1" size="0"></input>
+    <input type="text" id="stagecode2" size="0"></input>
+    <input type="text" id="stagecode3" size="0"></input>
+    <input type="text" id="stagecode4" size="0"></input>
+    <input type="text" id="stagecode5" size="0"></input>
+    <input type="submit" value="" id="submit"></input>
+  </form>
   <!-- use id not class lmao -->
   <script>
   let stage = 1
@@ -28,10 +36,20 @@
        if (stage == 4) {
             document.getElementById("codeimage").src="stage4.png";
             document.getElementById("checkpointP1").innerHTML="";
+            document.getElementById("stagecode1").size="0";
+            document.getElementById("stagecode2").size="0";
+            document.getElementById("stagecode3").size="0";
+            document.getElementById("stagecode4").size="0";
+            document.getElementById("stagecode5").size="0";
        }
       if (stage == 5) {
             document.getElementById("codeimage").src="blank.png";
-            document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages.";
+            document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages. They must be in order unless 2 codes were found on the same stage.";
+            document.getElementById("stagecode1").size="20";
+            document.getElementById("stagecode2").size="20";
+            document.getElementById("stagecode3").size="20";
+            document.getElementById("stagecode4").size="20";
+            document.getElementById("stagecode5").size="20";
        }
       } 
   }
@@ -47,15 +65,59 @@
          if (stage == 4) {
             document.getElementById("codeimage").src="stage4.png";
             document.getElementById("checkpointP1").innerHTML="";
+            document.getElementById("stagecode1").size="0";
+            document.getElementById("stagecode2").size="0";
+            document.getElementById("stagecode3").size="0";
+            document.getElementById("stagecode4").size="0";
+            document.getElementById("stagecode5").size="0";
          }
         if (stage == 5) {
             document.getElementById("codeimage").src="blank.png";
-            document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages.";
+            document.getElementById("checkpointP1").innerHTML="To move onto stage 6, enter the 5 codes within the past 4 stages. They must be in order unless 2 codes were found on the same stage.";
+            document.getElementById("stagecode1").size="20";
+            document.getElementById("stagecode2").size="20";
+            document.getElementById("stagecode3").size="20";
+            document.getElementById("stagecode4").size="20";
+            document.getElementById("stagecode5").size="20";
         }
         } 
        }
+    function checkCodes() {
+      let validCodes = 0
+      let code1 = document.getElementById('stagecode1').value
+      let code2 = document.getElementById('stagecode2').value
+      let code3 = document.getElementById('stagecode3').value
+      let code4 = document.getElementById('stagecode4').value
+      let code5 = document.getElementById('stagecode5').value
+
+      if (code1 == "darkness") {
+        validCodes = validCodes + 1
+      }
+      if (code2 == "finding" || code2 == "see") {
+        validCodes = validCodes + 1
+      }
+      if (code3 == "finding" || code3 == "see" && code3 != code2) {
+        validCodes = validCodes + 1
+      }
+      if (code4 == "chaos") {
+        validCodes = validCodes + 1
+      }
+      if (code5 == "scaped") {
+        validCodes = validCodes + 1
+      }
+
+      if (validCodes != 5) {
+        alert("You got " + validCodes + "/5 correct.")
+      }
+      else
+      {
+        stage = stage + 1
+        document.getElementById("codeimage").src="stage6.png";
+      }
+      
     document.getElementById('lbutton').addEventListener('click', leftButton)
     document.getElementById('rbutton').addEventListener('click', rightButton)
+    document.getElementById('submit').addEventListener('click', checkCodes)
   </script>
 </html>
 
