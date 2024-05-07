@@ -4,7 +4,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">Code Huntin' - v0.5</p> 
+  <p style="color:white">Code Huntin' - v0.6</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
@@ -71,7 +71,7 @@
         } 
        }
     function checkCodes(event) {
-      event.preventdefault();
+      event.preventDefault();
       let validCodes = 0
       let code1 = document.getElementById('stagecode1').value
       let code2 = document.getElementById('stagecode2').value
