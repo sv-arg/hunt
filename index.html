@@ -12,23 +12,24 @@
      stage = 2
      document.getElementById("number").innerHTML = "2"
    }
-  function guysitsafunction(event) {
+    
+  function leftbutton(event) {
     let key = event.code
-     if (key = 'KeyA') {
       if (stage != 1) {
        stage = stage - 1
       } 
-     }
-      if (key = 'KeyD') {
+  }
+    function rightbutton(event) {
         if (stage != 999) {
          stage = stage + 1
         } 
        }
-     }
+    
   </script>
-    <p style="color:white">v0.0.3.16 - make images NOW jesus christ you have 2 days until showcase you are so unbelivably behind</p> 
-  <input type="text" onkeypress="guysitsafunction(event)" size="23" placeholder="Press A or D here to change stages"></input>
-    <!-- <button onclick="code()">Enter a code...</button> legacy unused for now -->
+    <p style="color:white">v0.0.3.17- make images NOW jesus christ you have 1 day until showcase you are so unbelivably behind</p> 
+  <!-- <input type="text" onkeypress="guysitsafunction(event)" size="23" placeholder="Press A or D here to change stages"></input> -->
+    <button onclick="leftbutton()">Previous Stage</button>
+  <button onclick="rightbutton()">Next Stage</button>
     <p style="color:#111111; font-size:100px; class="unselectable;" class="centered"">DARKNESS</p>
 </html>
 
