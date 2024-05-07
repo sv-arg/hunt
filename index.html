@@ -4,12 +4,12 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">Code Huntin' - v0.4</p> 
+  <p style="color:white">Code Huntin' - v0.5</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
   <img src="stage1.png" id="codeimage">
-  <p id="checkpointP1"></p>
+  <p style="color:white" id="checkpointP1"></p>
   <form id="form">
     <input type="text" id="stagecode1" size="20"></input><br>
     <input type="text" id="stagecode2" size="20"></input><br>
@@ -110,7 +110,7 @@
     document.getElementById('rbutton').addEventListener('click', rightButton)
     document.getElementById('submit').addEventListener('click', function(event) {
     checkCodes(event);
-});
+    });
   </script>
 </html>
 
