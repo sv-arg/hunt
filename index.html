@@ -4,7 +4,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">Code Huntin' - v0.3</p> 
+  <p style="color:white">Code Huntin' - v0.4</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
@@ -70,7 +70,8 @@
         }
         } 
        }
-    function checkCodes() {
+    function checkCodes(event) {
+      event.preventdefault();
       let validCodes = 0
       let code1 = document.getElementById('stagecode1').value
       let code2 = document.getElementById('stagecode2').value
@@ -107,7 +108,9 @@
     
     document.getElementById('lbutton').addEventListener('click', leftButton)
     document.getElementById('rbutton').addEventListener('click', rightButton)
-    document.getElementById('submit').addEventListener('click', checkCodes)
+    document.getElementById('submit').addEventListener('click', function(event) {
+    checkCodes(event);
+});
   </script>
 </html>
 
