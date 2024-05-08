@@ -4,7 +4,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">Code Huntin' - v0.6</p> 
+  <p style="color:white">Code Huntin' - v1.0</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
@@ -101,7 +101,8 @@
       else
       {
         stage = stage + 1
-        document.getElementById("codeimage").src="stage6.png";
+        document.getElementById("checkpointP1").innerHTML="THE END";
+        document.getElementById("checkpointP1").size="40";
         document.getElementById("form").style.display = "block";
       }
     }
