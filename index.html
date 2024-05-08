@@ -4,7 +4,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
-  <p style="color:white">Code Huntin' - v1.0</p> 
+  <p style="color:white">Code Huntin' - v1.1</p> 
   <button id="lbutton">Previous Stage</button>
   <button id="rbutton">Next Stage</button>
   <p></p>
@@ -30,10 +30,10 @@
       if (stage != 1) {
        stage = stage - 1
        if (stage == 1) {
-            document.getElementById("codeimage").src="stage1.png";
+            document.getElementById("codeimage").src="stage2.png";
        }
        if (stage == 2) {
-            document.getElementById("codeimage").src="stage2.png";
+            document.getElementById("codeimage").src="stage1.png";
        }
        if (stage == 3) {
             document.getElementById("codeimage").src="stage3.png";
@@ -79,13 +79,13 @@
       let code4 = document.getElementById('stagecode4').value
       let code5 = document.getElementById('stagecode5').value
 
-      if (code1 == "darkness") {
+      if (code1 == "finding" || code1 == "see") {
         validCodes = validCodes + 1
       }
-      if (code2 == "finding" || code2 == "see") {
+      if (code2 == "finding" || code2 == "see" && code2 != code1) {
         validCodes = validCodes + 1
       }
-      if (code3 == "finding" || code3 == "see" && code3 != code2) {
+      if (code3 == "darkness") {
         validCodes = validCodes + 1
       }
       if (code4 == "chaos") {
